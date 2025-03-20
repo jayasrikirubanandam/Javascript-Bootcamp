@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="wrapper">
+        <h2> Palindrome Checker</h2>
+        <div class="inputdiv">
+        <input type="text" id = "stmnt" placeholder="enter your statement">
+        
+    </div>
+    <div>
+        <button type="submit" onclick="checkPalindrome()">Palindrome check</button>
+      </div>  
+    
+    
+<div id="result"> 
+
+</div>
+    <div>
+        <script>
+            function checkPalindrome(){
+            let value = document.querySelector('#stmnt').value //document.getElementById("stmnt").value
+            let rev = value.split('').reverse().join('')
+           // console.log(rev.replaceAll(' ','').toLowerCase() +"-------" +value.replaceAll(' ','').toLowerCase())
+            if(value.replaceAll(' ','').toLowerCase() == rev.replaceAll(' ','').toLowerCase()){
+                let res = document.getElementById("result")
+                res.innerHTML = "It is a palindrome"    
+            }else{
+                let res = document.getElementById("result")
+                res.innerHTML = "It is not  a palindrome" 
+            }
+            
+                
+        }
+        </script>
+    
+    </div>
+</body>
+</html>         
